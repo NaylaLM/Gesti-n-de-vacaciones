@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU */
+
+.contenedor-header{
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header p{
+    font-size: 24px;
+    font-family:Cambria;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #8f5e5e;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.nav-responsive{
+    background-color: #1CB698;
+    color:#93a19d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* BODY */
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(67, 94, 95);
+} 
+
+/* LISTA DESPLEGABLE */
+.dropdown {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(41, 247, 0);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* CALENDARIO */
+
+.wrapper{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    left: -15%; 
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(208, 240, 226);
+    border-radius: 15px;
+}
+
+.wrapper header{
+    display: flex;
+    padding: 35px 40px 20px;
+    justify-content: space-between;
+}
+
+header .icons span{
+    height: 40px;
+    width: 40px;
+    color: #b7b7b7;
+    font-size: 1.9rem;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+}
+header p{
+    font-family: Georgia;
+}
+header .icons span:last-child{
+    margin-right: -15px;
+}
+header .icons span:hover{
+    background: #eeecec;
+}
+header .current-date{
+    font-size: 1.45rem;
+    width: 10px;
+    font-weight: 500;
+}
+.calendario{
+    padding-right: 25px;
+}
+.calendario ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.calendario ul li{
+    position: relative;
+    width: calc(100% / 7);
+}
+.calendario .dias li{
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.calendario .semanas li{
+    font-weight: 500px
+}
+.calendario .dias{
+    margin-bottom: 20px;
+}
+
+
+.dias li.inactive{
+    color: #aaa;
+}
+.dias li.active{
+    color: #fff;
+}
+.calendario .dias li::before{
+    position: absolute;
+    content:"";
+    height:40px;
+    width: 40px;
+    top: 54%;
+    left: 51%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.dias li:hover::before{
+    background: #ece5e5;
+}
+.dias li.active::before{
+    background: #c69fd7;
+}
+.dias li.active::after{
+    background: #bfdbc7;
+}
+.dropdown-container{
+
+    width: 50px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+.dropdown-titulo-icon{
+    color:darkgray;
+    text-align:right;
+    padding: -10px;
+}
+.dropdown-titulo-icon li{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* FORMULARIO */
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    position: relative;
+    left: -40%; 
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
